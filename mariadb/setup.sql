@@ -1,0 +1,2 @@
+CREATE USER 'admin'@'%' IDENTIFIED BY 'strongpassword';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;
