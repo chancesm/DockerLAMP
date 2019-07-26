@@ -34,4 +34,4 @@ Any code written in the www directory of this repository is automagically mounte
 `docker-compose down` will stop and REMOVE the built containers when run. If you run this command, you will need to run `docker-compose up` in order to start the service again. If you do not want to remove and recreate the containers every time you need the LAMP Stack (when working on a longer project), then you can use `docker-compose stop` and `docker-compose start`  to stop and start the Stack. The database volume PERSISTS unless specifically removed (See next section).
 
 ## Removing the LAMP Stack
-In order to remove the LAMP Stack AND the database volume, run `docker-compose down --volumes` to delete the containers and the aassociated volumes for the stack. You can then use Docker to remove the aassociated images from your system if you choose.
+In order to remove the LAMP Stack AND the database volume, run `docker-compose down --volumes` to delete the containers and the aassociated volumes for the stack. You can then use Docker to remove the associated images from your system if you choose.
