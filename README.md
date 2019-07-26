@@ -1,4 +1,5 @@
 # DockerLAMP
+
 ### A docker-compose enabled LAMP stack for PHP Development
 
 ## About
@@ -8,6 +9,13 @@ I am starting to really dislike creating a VM for every project I work on. I am 
 | ------- | ---- |
 | Apache  |  80  |
 | MariaDB | 3306 |
+
+---
+
+## DISCLAIMER!!!
+This is recommended ONLY FOR DEVELOPMENT USE! I have implemented exactly 0 security features for this stack! Once your code is ready, put it on a development server.
+
+---
 
 ## Usage
 ### Install
