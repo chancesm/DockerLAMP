@@ -1,23 +1,29 @@
-version: '3'
-services: 
-  apache-php:
-    build:
-      context: ./apache-php
+version: "3.7"
+services:
+  web:
+    container_name: php-lamp
+    build: .
     ports:
       - 80:80
+      - 443:443
     volumes:
-      - ./www:/var/www/html
-    links:
-      - 'mariadb'
+      - ./html:/var/www/html
+    depends_on:
+      - mariadb
+
   mariadb:
-    build:
-      context: ./mariadb
+    image: mariadb
     volumes:
       - mariadb:/var/lib/mysql
     ports:
       - 3306:3306
+    restart: always
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "no"
-      MYSQL_ROOT_PASSWROD: "toor"
+      MYSQL_ROOT_PASSWORD: "toor"
+      MYSQL_USER: "admin"
+      MYSQL_PASSWORD: "changeme"
+      MYSQL_DATABASE: "todo"
+
 volumes:
   mariadb:
