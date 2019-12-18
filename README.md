@@ -7,7 +7,7 @@ I am starting to really dislike creating a VM for every project I work on. I am 
 
 | Service | Port |
 | ------- | ---- |
-| Apache  |  80  |
+| Apache  | 80   |
 | Apache  | 443  |
 | MariaDB | 3306 |
 
