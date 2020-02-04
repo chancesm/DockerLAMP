@@ -6,7 +6,7 @@
 
 $servername = "mariadb"; // DON'T CHANGE THIS
 $username = "admin";
-$password = "strongpassword";
-$dbname = ""; // YOUR DB GOES HERE
+$password = "changeme";
+$dbname = "todo"; // YOUR DB GOES HERE
 
 ?>
