@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   web:
-    container_name: php-lamp
+    container_name: apache-php
     build: .
     ports:
       - 80:80
@@ -24,6 +24,15 @@ services:
       MYSQL_USER: "admin"
       MYSQL_PASSWORD: "changeme"
       MYSQL_DATABASE: "todo"
-
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - mariadb
+    restart: always
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: mariadb
+      MYSQL_ROOT_PASSWORD: toor 
 volumes:
   mariadb:
